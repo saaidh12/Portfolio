@@ -10,6 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background:#f1f3f4 ;
 }
 
 .nav-header {
@@ -30,6 +31,7 @@ body {
   'opsz' 48
 }
 .material-symbols-outlined:hover {
+  color: #02464b;
   color: #04a2ae;
   transition: 1s ease-in-out;
 
@@ -41,8 +43,9 @@ body {
   padding: 12px 20px;
   position: fixed;
   justify-content: space-between;
-  background: transparent;
-  box-shadow: 2px 2px 2px rgb(131, 244, 252);
+  background: white;
+  box-shadow: 1px 1px 1px rgb(131, 244, 252);
+  z-index: 1;
   
 }
 
@@ -66,6 +69,70 @@ body {
   color: #04a2ae;
   transition: 1s ease-in-out;
 }
+/*Hero Sectiom*/
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100vh - 48px);
+}
+
+.hero-animation {
+  top:48px;
+  width: 45rem;
+  height: auto;
+  background: transparent;
+}
+
+.right-content {
+  padding: 40px;
+  margin-right: 20px;
+  width: 40rem;
+}
+
+.right-content h4 {
+  font-size: 30px;
+  color: #02464b;
+}
+
+.right-content h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #04a2ae;
+
+}
+
+.right-content p {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #02464b;
+}
+
+.btn-contact{
+  margin-top: 20px;
+  background: #04a2ae;
+  border: 1px solid #02464b ;
+  padding: 15px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10%;
+}
+.btn-contact a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #011719;
+
+}
+
+.btn-contact:hover {
+  background: #06d1e0;
+  transition: all 2s ease-in-out;
+}
+
+
 
 @media screen and (max-width:768px) {
   .material-symbols-outlined {
@@ -101,9 +168,93 @@ body {
     display: block;
   }
 
+  .nav-link a:hover {
+    padding-left: 8px;
+  }
+
+
   .show-links {
     display: block;
     height: 192px;
   }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 48px);
+  }
   
+  .hero-animation {
+    width: 30rem;
+    height: auto;
+    background: transparent;
+  }
+
+  .left-content {
+    margin: 48px auto;
+  }
+  
+  .right-content {
+    text-align: center;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  
+  .right-content h4 {
+    padding: 0;
+    font-size: 20px;
+    color: #02464b;
+  }
+  
+  .right-content h1 {
+    font-size: 30px;
+    padding: 0;
+    text-transform: uppercase;
+    color: #04a2ae;
+  
+  }
+  
+  .right-content p {
+    padding: 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #02464b;
+  }
+  
+}
+/*****************************************************/
+@media screen and (max-width:1377px) {
+
+  .hero-animation {
+    top:48px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+  }
+  .right-content {
+    padding: 20px;
+    margin-right: 20px;
+    width: 40rem;
+    height: auto;
+  }
+  
+}
+
+@media screen and (max-width:1264px) {
+
+  .hero-animation {
+    top:48px;
+    width: 100%;
+    height: auto;
+    background: transparent;
+  }
+  .right-content {
+    padding: 20px;
+    margin-right: 20px;
+    width: 40rem;
+    height: auto;
+  }
 }
