@@ -10,13 +10,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background:#f1f3f4 ;
+  background:white;
 }
 
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo img{
+  width: 35px;
+  height: auto;
 }
 
 .material-symbols-outline {
@@ -30,7 +35,7 @@ body {
 .material-symbols-outlined {
   display: none;
   font-size: 1.4rem;
-  color: #02464b;
+  color: #011a1c;
   cursor: pointer;
   font-variation-settings:
   'FILL' 0,
@@ -39,9 +44,8 @@ body {
   'opsz' 48
 }
 .material-symbols-outlined:hover {
-  color: #02464b;
-  color: #04a2ae;
-  transition: 1s ease-in-out;
+  color: #FCC232;
+  transition: 500ms ease-in-out;
 
 }
 
@@ -52,13 +56,13 @@ body {
   position: fixed;
   justify-content: space-between;
   background: white;
-  box-shadow: 1px 1px 1px rgb(131, 244, 252);
+  box-shadow: 1px 1px 2px #faeeaf;
   z-index: 1;
-  
 }
 
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
 }
 .nav-link {
@@ -70,55 +74,67 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1.5px;
-  color: #02464b;
+  color: #011a1c;
 }
 
 .nav-link a:hover {
-  color: #04a2ae;
-  transition: 1s ease-in-out;
+  color: #FCC232;
+  transition: 500ms ease-in-out;
 }
 /*Hero Sectiom*/
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content:space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: calc(100vh - 48px);
+
 }
 
-.hero-animation {
-  top:48px;
-  width: 45rem;
+.image {
+  width:30rem;
   height: auto;
-  background: transparent;
+  border-radius: 50%;
+  border: 4px dotted #FCC232;
 }
 
-.right-content {
-  text-align: center;
-  padding: 40px;
-  margin-right: 20px;
+.hero-right {
+  width: 30%;
+  height: auto;
 }
 
-.right-content h4 {
-  font-size: 30px;
-  color: #02464b;
+.hero-right h1 {
+  font-size: 2rem;
 }
 
-.right-content h1 {
-  font-size: 60px;
-  text-transform: uppercase;
-  color: #04a2ae;
+.hero-right h1 span {
+  font-size: 2rem;
+  color: #FCC232;
+}
+
+.hero-right p {
+  font-size: 1rem;
+  margin-top: 0.7rem;
+  color: #838686;
+}
+.fa-brands  {
+  font-size: 2rem;
+  color:black;
+  margin-right: 0.6rem;
+  transition: all;
+}
+
+.fa-brands:hover {
+  color: #555554;
+  transition: 500ms ease-in-out;
 
 }
 
-.right-content p {
-  font-size: 35px;
-  text-transform: uppercase;
-  color: #02464b;
+.icons {
+  margin-top: 1rem;
 }
-
 
 
 @media screen and (max-width:768px) {
@@ -129,7 +145,7 @@ body {
   }
   .nav-header {
     padding: 12px 20px;
-    border-bottom: 1px solid rgb(131, 244, 252);
+    border-bottom: 0.5px solid #FCC232;
     margin: 0;
     
   }
@@ -165,84 +181,34 @@ body {
     height: 192px;
   }
 
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: calc(100vh - 49px);
-  }
-  
-  .hero-animation {
-    width: 40rem;
-    height: auto;
-    background: transparent;
-  }
 
-  .left-content {
-    margin: 85px  auto 0 auto;
-  }
-  
-  .right-content {
-    text-align: center;
-    padding: 0;
-    margin-bottom:95px;
-    
+/**************************************/
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  justify-content:space-evenly;
+  align-items: center;
 
-  }
-  
-  .right-content h4 {
-    padding: 0;
-    font-size: 20px;
-    color: #02464b;
-  }
-  
-  .right-content h1 {
-    font-size: 30px;
-    padding: 0;
-    text-transform: uppercase;
-    color: #04a2ae;
-  
-  }
-  
-  .right-content p {
-    padding: 0;
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #02464b;
-  }
-  
 }
+.image {
+  width:20rem;
+  height: auto;
+  display: block;
+}
+
+.hero-right {
+  text-align: center;
+  margin-top: -3rem;
+  width: 100%;
+}
+
+  
 /*****************************************************/
-@media screen and (max-width:1377px) {
-
-  .hero-animation {
-    top:48px;
-    width: 100%;
-    height: auto;
-    background: transparent;
-  }
-  .right-content {
-    padding: 20px;
-    margin-right: 20px;
-    width: 40rem;
-    height: auto;
-  }
+@media screen and (min-width:769px) and (max-width:1000px) {
   
 }
-
-@media screen and (max-width:1264px) {
-
-  .hero-animation {
-    top:48px;
-    width: 100%;
-    height: auto;
-    background: transparent;
-  }
-  .right-content {
-    padding: 20px;
-    margin-right: 20px;
-    width: 40rem;
-    height: auto;
-  }
-}
+/***************************************************/
+/* key frames*/
